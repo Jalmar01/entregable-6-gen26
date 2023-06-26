@@ -1,0 +1,50 @@
+.loginpages__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8em; 
+}
+
+.container__login{
+    height: 100%;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    border: none;
+    border-radius: 1em;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    padding: 25px;
+    width: 100%;
+}
+
+.container__email,
+.container__password {
+    width: 100%;
+    font-weight: 600;
+}
+
+.container__email input,
+.container__password input  {
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3px;
+    display: block;
+    margin-top: 4px;
+    padding: 6px 8px;
+    width: 100%; 
+}
+
+.login__btn {
+    margin-top: 1.5em;
+    width: 100%;
+    background-color: var(--color-red);
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3px;
+    display: block;
+    padding: 6px 8px;
+}

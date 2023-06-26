@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --color-red: #f85555;
+    --light-gray: #dcd9d9;
+    --gray: #c7c7c7;
+    --dark-gray: #4f4f4f;
+    --text-gray: #ababab;
+}
+
+
+/*reset*/
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Public Sans', sans-serif;
+}
+
+h1, h2, h3, h4, p, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+input, button {
+    outline: none;
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
