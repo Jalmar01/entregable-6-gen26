@@ -95,6 +95,7 @@
   right: 1em;
   background-color: var(--color-red);
   color: white;
+  border: none;
 }
 
 .product__btn:hover {
