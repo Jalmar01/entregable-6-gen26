@@ -3,6 +3,7 @@ import usefetch from "../hooks/usefetch"
 import { useEffect } from "react"
 import ProductInfo from "../components/ProducId/ProductInfo"
 import SimilarProducts from "../components/ProducId/SimilarProducts"
+import SliderImgs from "../components/ProducId/SliderImgs"
 
 const ProductIdPage = () => {
 
@@ -16,6 +17,9 @@ useEffect(() => {
 
   return (
     <div>
+        <SliderImgs
+          product={product}
+        />
         <ProductInfo
           product={product}
         />

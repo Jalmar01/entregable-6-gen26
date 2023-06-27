@@ -13,7 +13,6 @@ const SimilarProducts = ({product}) => {
   }
  }, [product])
  
-console.log(productsByCategory);
 
   return (
     <div>
