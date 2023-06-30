@@ -1,19 +1,29 @@
+import { useForm } from 'react-hook-form'
 import './styles/FilterPrice.css'
-const FilterPrice = () => {
 
 
+const FilterPrice = ({ setPriceMinMax }) => {
+
+const {register, handleSubmit} = useForm()
+
+ const submit = data => {
+   const min = data.form.trim() === "" ? 0 : +data.form
+   const max = data.to.trim() === "" ? Infinity : +data.to
+  
+   setPriceMinMax({min, max})
+ }
     
     return (
         <article>
             <h2>Price</h2>
-            <form>
+            <form onSubmit={handleSubmit(submit)}>
                 <div>
                     <label htmlFor="form">Form</label>
-                    <input type="text" id="form" />
+                    <input {...register('form')} type="number" id="form" />
                 </div>
                 <div>
                     <label htmlFor="to">To</label>
-                    <input type="text" id="to" />
+                    <input {...register('to')} type="number" id="to" />
                 </div>
                 <button className='filter__btn'>Filter for Price</button>
             </form>

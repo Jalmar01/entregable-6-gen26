@@ -22,11 +22,20 @@ const Home = () => {
 
     const callbackFilter = prod => prod.title.toLowerCase().includes(inputValue)
 
+
+    const cbFilterPrice = prod => {
+        const condMin =  priceMinMax.min <= prod.price
+        const condMax = prod.price <= priceMinMax.max 
+         return  condMin && condMax 
+    }
+
+    
+
     return (
         <div className="home">
            
             <aside className="container_filter">
-            <FilterPrice/>    
+            <FilterPrice setPriceMinMax={setPriceMinMax}/>    
             <FilterCategory/>
             </aside>
 
@@ -41,7 +50,7 @@ const Home = () => {
             <div className="product__container-card">
                    
                 {
-                    products?.filter(callbackFilter).map(prod => (
+                    products?.filter(callbackFilter).filter(cbFilterPrice).map(prod => (
                         <CardProduct
                             key={prod.id}
                             prod={prod}
