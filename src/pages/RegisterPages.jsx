@@ -21,7 +21,9 @@ const submit = data => {
 
   return (
     <div className="registerpages__container">
+        
         <form className="container__form" onSubmit={handleSubmit(submit)}>
+        <h2>Register</h2>
             <div className="container__value">
                 <label htmlFor="first name">First name</label>
                 <input {...register('firstName')} type="text" id="first name"/>

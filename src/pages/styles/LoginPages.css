@@ -1,13 +1,15 @@
 .loginpages__container{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4em; 
+    margin-top: 80px; 
+    margin-bottom: 2em;
 }
 
 .container__login{
-    height: 100%;
+    height: 400px;
     background-color: #ccc;
     display: flex;
     flex-direction: column;
@@ -19,14 +21,27 @@
     padding: 2rem;
     border-radius: 10px;
     max-width: 400px;
-    padding: 25px;
+    padding: 30px;
     width: 100%;
+    margin: 10px;
+}
+
+.container__login h2 {
+    margin-bottom: 1.5em;
+    color: var(--color-red) ;
+    font-weight: 700;
+    font-size: 2em;
 }
 
 .container__email,
 .container__password {
     width: 100%;
     font-weight: 600;
+}
+
+.container__email label,
+.container__password label {
+    color: black;
 }
 
 .container__email input,
@@ -36,7 +51,7 @@
     display: block;
     margin-top: 4px;
     padding: 6px 8px;
-    width: 100%; 
+    width: 100%;
 }
 
 .login__btn {
@@ -47,4 +62,17 @@
     border-radius: 3px;
     display: block;
     padding: 6px 8px;
+}
+
+.login__send-register   {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 2em;
+    gap: 0.5em;
+}
+
+.login__send-register p  {
+    color: black;
+
 }

@@ -12,6 +12,7 @@
 /*reset*/
 *{
     box-sizing: border-box;
+    color: var( --text-gray);
 }
 
 body {
@@ -28,6 +29,7 @@ ul {
     padding-left: 0;
     list-style: none;
 }
+
 
 img {
     width: 100%;

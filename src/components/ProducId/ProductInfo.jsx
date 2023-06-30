@@ -1,9 +1,12 @@
-import { useState } from "react"
-import './styles/ProductInfo.css'
+import { useState } from "react";
+import './styles/ProductInfo.css';
+import { postCartThunk } from "../../store/slices/Cart.slice";
+import {useDispatch} from "react-redux";
+
 
 const ProductInfo = ({ product }) => {
 
-    const [quantity, setQuantity] = useState(1)
+const [quantity, setQuantity] = useState(1)
 
     const handlMinus = () => {
         if(quantity -1 >= 1)
@@ -11,9 +14,14 @@ const ProductInfo = ({ product }) => {
     }
 
 
-    const handleAdd = () => setQuantity(state => state +1)
+const handleAdd = () => setQuantity(state => state +1)
 
+    const dispatch = useDispatch()
   
+const handleAddToCart = () => {
+   dispatch(postCartThunk(product, quantity)) 
+}
+
   
 
   return (
@@ -36,7 +44,7 @@ const ProductInfo = ({ product }) => {
                    </div>
                 </li>
             </ul>
-            <button className="productinfo__btn-cart">Add to cart
+            <button onClick={handleAddToCart} className="productinfo__btn-cart">Add to cart
                 <i className='bx bx-cart'></i>
             </button>
         </footer>

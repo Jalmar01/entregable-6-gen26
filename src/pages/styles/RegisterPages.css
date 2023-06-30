@@ -3,7 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3em;
+    margin-top: 85px;
+    margin-bottom: 50px;
+}
+
+.registerpages__container h2{
+    color: var(--color-red);
+    margin-bottom: 0.8em;
 }
 
 .container__form {
@@ -26,6 +32,10 @@
 .container__value{
     width: 100%;
     font-weight: 600;
+}
+
+.container__value label {
+    color: black;
 }
 
 .container__value input{

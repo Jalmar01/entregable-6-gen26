@@ -1,0 +1,11 @@
+.filter__btn {
+    background-color: var(--color-red);
+    margin-top: 0.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 0.5em;
+    
+}

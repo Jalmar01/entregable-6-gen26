@@ -1,27 +1,56 @@
 import { useSelector } from "react-redux"
 import CardProduct from "../components/home/CardProduct";
-
+import { useState } from "react";
+import FilterCategory from "../components/home/FilterCategory";
+import FilterPrice from "../components/home/FilterPrice";
+import './styles/Home.css'
 
 const Home = () => {
 
- const products = useSelector( states => states.products)
+    const [inputValue, setInputValue] = useState("")
+    const [priceMinMax, setPriceMinMax] = useState({
+        min:0,
+        max:Infinity
+    })
 
+    const products = useSelector(states => states.products)
 
-  return (
-    <div >
-        <h1>Home</h1>
-        <div className="product__container-card">
-            {
-                products?.map(prod => (
-                    <CardProduct
-                        key={prod.id}
-                        prod={prod}
-                    />
-                ))
-            }
+    const handleSearchName = e => {
+        setInputValue(e.target.value.toLowerCase())
+
+    }
+
+    const callbackFilter = prod => prod.title.toLowerCase().includes(inputValue)
+
+    return (
+        <div className="home">
+           
+            <aside className="container_filter">
+            <FilterPrice/>    
+            <FilterCategory/>
+            </aside>
+
+            <div className="container__input">
+                <input 
+                    value={inputValue} 
+                    onChange={handleSearchName} 
+                    type="text" 
+                    placeholder="Enter a Keyword"
+                />
+            </div>
+            <div className="product__container-card">
+                   
+                {
+                    products?.filter(callbackFilter).map(prod => (
+                        <CardProduct
+                            key={prod.id}
+                            prod={prod}
+                        />
+                    ))
+                }
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Home
