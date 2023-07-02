@@ -8,7 +8,6 @@ const ProtectedRoute = () => {
         return <Navigate to={'/login'} />
     }
 
- 
 }
 
 export default ProtectedRoute
