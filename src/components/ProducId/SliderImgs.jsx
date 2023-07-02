@@ -28,7 +28,7 @@ const [indexImg, setIndexImg] = useState(0)
 
 
   return (
-  <>
+  <div className='slider__container-global'>
     <div className="slider">
       <button onClick={handlePrevious} className='slider__btn  slider__left'>&lt;</button>
         <div style={styleMovible} className="slider__movible">
@@ -41,8 +41,8 @@ const [indexImg, setIndexImg] = useState(0)
           }
         </div>
         <button onClick={handleNext} className='slider__btn  slider__rigth'>&gt;</button>
-    </div>
-    <div className='slider__footer-container--general'>
+      </div>
+      <div className='slider__footer-container--general'>
         <div className='slider__footer'>
             {
                 product?.images.map((imgInfo, i) => (
@@ -58,7 +58,7 @@ const [indexImg, setIndexImg] = useState(0)
             }
         </div>
     </div>
-    </>
+    </div>
   )
 }
 

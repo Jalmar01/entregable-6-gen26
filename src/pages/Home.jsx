@@ -35,7 +35,10 @@ const Home = () => {
         <div className="home">
            
             <aside className="container_filter">
-            <FilterPrice setPriceMinMax={setPriceMinMax}/>    
+            <FilterPrice 
+                    priceMinMax={priceMinMax}
+                    setPriceMinMax={setPriceMinMax}
+            />    
             <FilterCategory/>
             </aside>
 
@@ -47,6 +50,8 @@ const Home = () => {
                     placeholder="Enter a Keyword"
                 />
             </div>
+
+            
             <div className="product__container-card">
                    
                 {

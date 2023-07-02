@@ -16,7 +16,7 @@ const SimilarProducts = ({product}) => {
 
   return (
     <div>
-      <h2>Similar product</h2>
+      <h2 className="similar__pruct-title">Similar product</h2>
       <div className="product__container-card">
       {
         productsByCategory?.map(prod => {

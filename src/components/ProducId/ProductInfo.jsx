@@ -27,8 +27,10 @@ const handleAddToCart = () => {
   return (
     <article className="productinfo__info">
         <h3 className="productinfo__brand">{product?.brand}</h3>
-        <h2 className="productinfo__title">{product?.title}</h2>
-        <p className="productinfo__description">{product?.description}</p>
+       <div className="container__productinfo-text">
+                <h2 className="productinfo__title">{product?.title}</h2>
+                <p className="productinfo__description">{product?.description}</p>
+       </div>
         <footer className="productinfo__footer">
             <ul className="productinfo__ul">
                 <li className="productinfo__container-price">
@@ -44,9 +46,11 @@ const handleAddToCart = () => {
                    </div>
                 </li>
             </ul>
-            <button onClick={handleAddToCart} className="productinfo__btn-cart">Add to cart
-                <i className='bx bx-cart'></i>
-            </button>
+           <div className="productinfo__footer-btn">
+                <button onClick={handleAddToCart} className="productinfo__btn-cart">Add to cart
+                        <i className='bx bx-cart'></i>
+                </button>
+           </div>
         </footer>
     </article>
   )

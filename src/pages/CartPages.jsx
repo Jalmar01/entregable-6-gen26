@@ -19,14 +19,14 @@ const handlePurchases = ()  => {
   makePurchases()
 }
 
-const [isClose, setIsClose] = useState(true)
+const [isClose, setIsClose] = useState(false)
 
 const handleClose = () => {
-    setIsClose(open)
+  setIsClose(open)
 }
 
   return (
-    <section className={`cart__modal ${'open'}`}>
+    <section className="cart__modal">
       <div className="cart">
         <div onClick={handleClose} className={`cart__icon ${'open'}`}>
         <span></span>

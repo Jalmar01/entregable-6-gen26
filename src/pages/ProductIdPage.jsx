@@ -17,12 +17,15 @@ useEffect(() => {
 
   return (
     <div>
-        <SliderImgs
+      <div className="productIdPage__container-sliderproduct">
+      <SliderImgs
           product={product}
         />
         <ProductInfo
           product={product}
         />
+      </div>
+        
         <SimilarProducts
           product={product}
         />

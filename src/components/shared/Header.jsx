@@ -15,6 +15,7 @@ const handleIsOpen = () => {
 
 
 
+
   return (
     <header className='header__container'>
        <div className='header'>
@@ -23,9 +24,9 @@ const handleIsOpen = () => {
                     <Link className='logo__link'  to='/'> e-commerce </Link>
                 </h1>
                 <ul className={`container__icon-header ${isOpen && 'open'}`}>
-                    <li className='icon__header'>
+                      <li className='icon__header'>
                         <Link className='icon__header-link' to='login'><i className='bx bx-user'></i></Link>
-                    </li>
+                      </li>
                     <li className='icon__header'>
                         <Link className='icon__header-link' to='cart'><i className='bx bxs-cart'></i></Link>
                     </li>
